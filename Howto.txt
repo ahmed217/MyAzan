@@ -1,0 +1,7 @@
+1. sudo raspi-config and select audio jack instead of HDMI
+2. copy azan.service to /lib/systemd/system/azan.service
+3. sudo mkdir /var/log/azan
+4. sudo touch /var/log/azan/azan.log
+5. sudo chown pi:pi /var/log/azan/azan.log
+6. systemctl restart azan
+7. sudo systemctl enable azan.service 

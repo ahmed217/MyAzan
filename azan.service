@@ -1,0 +1,15 @@
+[Unit]
+Description=Azan Scheduler Service
+After=multi-user.target
+
+[Service]
+Type=idle
+WorkingDirectory=/home/pi/MyAzan
+ExecStart=/home/pi/MyAzan/azanschedule.py 
+User=pi
+StandardOutput=append:/var/log/azan/azan.log
+StandardError=inherit
+
+[Install]
+WantedBy=multi-user.target
+
